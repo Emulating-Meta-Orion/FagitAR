@@ -22,7 +22,7 @@ export const logout = () => {
 };
 
 export const updateProfile = async user => {
-  const { data } = await axios.put('/api/users/updateProfile', user);
+  const { data } = await axios.put('https://fagitar.onrender.com/api/users/updateProfile', user);
   localStorage.setItem('user', JSON.stringify(data));
   return data;
 };
