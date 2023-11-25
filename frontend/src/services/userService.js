@@ -6,13 +6,13 @@ export const getUser = () =>
     : null;
 
 export const login = async (email, password) => {
-  const { data } = await axios.post('api/users/login', { email, password });
+  const { data } = await axios.post('https://fagitar.onrender.com/api/users/login', { email, password });
   localStorage.setItem('user', JSON.stringify(data));
   return data;
 };
 
 export const register = async registerData => {
-  const { data } = await axios.post('api/users/register', registerData);
+  const { data } = await axios.post('https://fagitar.onrender.com/api/users/register', registerData);
   localStorage.setItem('user', JSON.stringify(data));
   return data;
 };
@@ -28,5 +28,5 @@ export const updateProfile = async user => {
 };
 
 export const changePassword = async passwords => {
-  await axios.put('/api/users/changePassword', passwords);
+  await axios.put('https://fagitar.onrender.com/api/users/changePassword', passwords);
 };
