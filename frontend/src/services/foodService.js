@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getAll = async () => {
-  const { data } = await axios.get('https://fagitar.onrender.com/api/foods');
+  const { data } = await axios.get('/api/foods');
   console.log(data);
   return data;
 };
